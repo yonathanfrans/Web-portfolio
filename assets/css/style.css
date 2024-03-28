@@ -1,0 +1,571 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root {
+    --bg-color: #FAF9F6;
+    --main-color: #87CEEB;
+    --second-color:	#191970;
+
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+section {
+    padding-top: 4vh;
+    height: 96vh;
+    margin: 0 10rem;
+    min-height: fit-content;
+}
+
+.navbar-nav, .nav-links {
+    display: flex;
+}
+
+.navbar-container .navbar-nav {
+    justify-content: space-around;
+    align-items: center;
+    height: 17vh;
+}
+
+.navbar-container .navbar-nav .nav-links {
+    gap: 2rem;
+    list-style: none;
+    font-size: 1.5rem;
+}
+
+.navbar-container .navbar-nav .nav-links a {
+    color: black;
+    text-decoration: none;
+    text-decoration-color: white;
+}
+
+.navbar-container .navbar-nav .nav-links a:hover {
+    color: var(--main-color);
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+    text-decoration-color: var(--main-color);
+}
+
+.navbar-container .navbar-nav .logo {
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+.navbar-container .navbar-nav .logo:hover {
+    cursor: default;
+}
+
+#hamburger-menu {
+    display: none;
+    font-size: 35px;
+}
+  
+
+#profile {
+    display: flex;
+    justify-content: center;
+    gap: 10rem;
+    height: 80vh;
+}
+  
+.profile-pic {
+    display: flex;
+    position: absolute;
+    top: 15%;
+    height: 360px;
+    width: 360px;
+    margin: auto 0;
+    border-radius: 50%;
+    background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+    
+}
+
+.profile-pic img {
+    top: -32%;
+    left: -17%;
+    position: absolute;
+    width: 500px;
+    height: 500px;  
+} 
+
+.picture-box {
+    position: relative;
+    height: 600px;
+    width: 400px;
+}
+  
+.hero-profile {
+    align-self: center;
+}
+  
+.profile-text {
+    width: 500px;
+    margin-bottom: 1rem;
+}
+
+.profile-name {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0.5rem 0 1rem;
+    
+}
+
+.profile-name span {
+    color: var(--main-color);
+}
+
+
+aside {
+    position: fixed;
+    inset-block: 0;
+    inset-inline-end: 0;
+    width: 30%;
+    margin-top: 8.5rem;
+    z-index: 1000;
+}
+.aside-box {
+    width: 700px;
+}
+.aside-title {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.aside-img img {
+    width: 70%;
+    object-fit: cover;
+}
+   
+.social-media {
+    display: flex;
+}
+   
+.social-media ul {
+    padding: 1.3rem 1rem;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.social-media li a {
+    font-size: 1.5rem;
+    color: black;
+    transition: all 0.1s ease-in-out;
+}
+   
+.social-media li a:hover {
+    color: var(--main-color);
+}
+
+#arrow-aside {
+    font-size: 35px;
+    color: var(--main-color);
+    right: 0;
+    position: absolute;
+    top: 40%;
+}
+
+.aside-box {
+    display: none;
+}
+
+.aside-box.active {
+    display: block;
+}
+
+#about {
+    position: relative;
+}
+
+.about-p, .skills-p, .projects-p, .contact-p {
+    text-align: center;
+}
+
+.about-title, .skills-title, .projects-title, .contact-title {
+    font-size: 2.5rem;
+    text-align: center;
+    color: var(--main-color);
+}
+
+.about-containers, .skills-containers, .projects-containers, .aside-containers {
+    display: flex;
+    gap: 2rem;
+    margin: 2rem auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.box-containers { 
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+    margin-top: 2rem;
+}
+
+.about-box, .skill-box, .aside-box {
+    padding: 1.5rem;
+    text-align: center;
+    flex: 1;
+    width: 300px;
+    background: white;
+    border: 0.1rem solid rgb(163, 163, 163);
+    border-radius: 2rem;
+    box-shadow: 8px 10px 18px 0px var(--main-color);
+}
+
+.about-box i {
+    font-size: 25px;
+}
+
+.about-details {
+    text-align: center;
+    width: 100%;
+    font-size: 15px;
+}
+
+#skills {
+    position: relative;
+}
+
+.skills-subtitle {
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin-bottom: 3rem;
+}
+
+.skill-box {
+    width: 450px;
+}
+
+.article-container {
+    display: flex; 
+    text-align: initial;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 2.5rem;
+    justify-content: space-around;
+}
+  
+article {
+    display: flex;
+    width: 10rem;
+    justify-content: space-around;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+article i {
+    font-size: 25px;
+    color: var(--second-color);
+}
+
+#projects {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.projects-box {
+    border: 0.1rem solid rgb(163, 163, 163);
+    border-radius: 2rem;
+    background: white;
+    box-shadow: 8px 10px 18px 0px var(--main-color);
+    width: 500px;
+    overflow: hidden;
+    flex: 1;
+}
+
+.project-cover {
+    height: 250px;
+}
+  
+.project-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+  
+.project-info {
+    padding: 2rem 1.5rem;
+}
+
+.project-info p {
+    font-size: 14px;
+}
+  
+.project-subtitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+  
+.project-subtitle h4 {
+    font-weight: 500;
+    font-size: 1.05rem;
+}
+
+.project-subtitle a {
+    font-size: 20px;
+    color: var(--second-color);
+}
+
+.project-subtitle a:hover {
+    color: var(--main-color);
+}
+
+.project-tags {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.project-tags div {
+    font-size: 0.9rem;
+    border: 1px solid #EDEADE;
+    padding: 0.4rem 1rem;
+}
+
+.project-tags div:hover {
+    background-color: var(--main-color);
+}
+
+#contact {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 70vh;
+}
+
+.contact-containers {
+    display: flex;
+    justify-content: center;
+    border: 0.1rem solid rgb(163, 163, 163);
+    border-radius: 2rem;
+    background: white;
+    margin: 2rem auto;
+    padding: 0.5rem;
+}
+
+.contact-detail {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 1rem;
+}
+
+.contact-detail a {
+    font-size: 20px;
+    color: black;
+}
+
+.contact-detail a:hover {
+    color: var(--main-color);
+}
+
+.contact-detail i {
+    font-size: 20px;
+}
+
+footer {
+    height: 26vh;
+    margin: 0 1rem;
+    border-top: 2px solid var(--main-color);
+}
+  
+footer p {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+
+@media screen and (max-width: 1200px) {
+    #profile {
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        margin-bottom: 10rem;
+    } 
+    #about, #skills, #projects, #contact {
+        height: 60vh;
+        margin-bottom: 8rem;
+    }
+    aside {
+        width: 40%;
+    }
+    .picture-box {
+        display: flex;
+        order: -1;
+        align-items: center;
+        justify-content: center;
+    }
+    .skill-box {
+        width: 350px;
+    }
+    .hero-profile {
+        text-align: center;
+    }
+    .about-containers, .skills-containers, .projects-containers, .contact-containers {
+        margin-top: 3rem;
+        flex-wrap: wrap;
+    }
+    .about-details {
+        width: 80%;
+        margin-top: 2rem;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    header .nav-links {
+        display: none;
+    }
+    #hamburger-menu {
+        display: block;
+    }
+    .nav-links.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 10%;
+        left: 67%;
+        height: 30vh;
+        width: 30%;
+        background-color: #fff;
+        z-index: 1000;
+    }
+    #contact, #projects, footer {
+        height: 50vh;
+    }
+    #profile, #about {
+        height: 80vh;
+        margin-bottom: 7rem;
+    }
+    aside {
+        width: 45%;
+    }
+    #skills {
+        height: 80vh;
+        margin-bottom: 4rem;
+    }
+    article {
+        font-size: 1rem;
+    }
+    footer {
+        height: fit-content;
+        margin-bottom: 0.2rem;
+    }
+    .box-containers, .about-containers, .skills-containers, .projects-containers, .contact-containers {
+        flex-wrap: wrap;
+    }
+    .contact-detail {
+        margin: 0 1rem;
+    }
+    .contact-detail a, .nav-links li a {
+        font-size: 1rem;
+    }
+    .skills-subtitle {
+        font-size: 1.25rem;
+    }
+    .logo {
+        font-size: 1.5rem;
+    }
+    header .nav-links {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
+    .about-title, .skills-title, .projects-title, .contact-title {
+        font-size: 2rem;
+    }
+    .about-details {
+        text-align: left;
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 730px) {
+    section {
+        margin: 0 3rem 0 3rem;
+    }
+    aside {
+        width: 55%;
+    }
+    .projects-box {
+        width: 90%;
+    }
+    .project-tags {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .skill-box {
+        width: 350px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    section {
+        margin: 0 3rem 0 3rem;
+    }
+    aside {
+        width: 85%;
+    }
+    .nav-links.active {
+        height: 34vh;
+    }
+    .profile-text {
+        width: 300px;
+        margin-bottom: 1rem;
+    }
+    .profile-name {
+        font-size: 1.8rem;
+    }
+    #about, #skills{
+        margin-bottom: 12rem;
+    }
+    #projects {
+        margin-top: 25rem;
+    }
+    .about-details {
+        text-align: center;
+        width: 100%;
+        font-size: 0.9rem;
+    }
+    .about-title {
+        font-size: 1.8rem;
+    }
+    .box-containers {
+        justify-content: center;
+        align-items: center;
+    }
+    .about-box, .skill-box, .projects-box {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .about-containers, .skills-containers, .projects-containers, .contact-containers {
+        margin-top: 3rem;
+        flex-wrap: wrap;
+    }
+    footer {
+        height: fit-content;
+        margin-bottom: 0.2rem;
+    }
+}
