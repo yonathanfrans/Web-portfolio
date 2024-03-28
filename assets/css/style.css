@@ -28,7 +28,7 @@ body {
 
 section {
     padding-top: 4vh;
-    height: 96vh;
+    height: 93vh;
     margin: 0 10rem;
     min-height: fit-content;
 }
@@ -229,7 +229,7 @@ aside {
     background: white;
     border: 0.1rem solid rgb(163, 163, 163);
     border-radius: 2rem;
-    box-shadow: 8px 10px 18px 0px var(--main-color);
+    box-shadow: 8px 8px 18px 0px var(--main-color);
 }
 
 .about-box i {
@@ -280,7 +280,17 @@ article i {
 
 #projects {
     position: relative;
-    margin-bottom: 2rem;
+    margin-bottom: 5rem;
+    padding: 3rem;
+    height: max-content;
+}
+
+.projects-containers {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5rem;
+    width: auto;
+    padding-top: 3rem;
 }
 
 .projects-box {
@@ -290,7 +300,7 @@ article i {
     box-shadow: 8px 10px 18px 0px var(--main-color);
     width: 500px;
     overflow: hidden;
-    flex: 1;
+    /* flex: 1; */
 }
 
 .project-cover {
