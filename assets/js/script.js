@@ -17,9 +17,15 @@ document.addEventListener('click', function (e) {
 
 // Toggle class active untuk arrow aside
 const asideBox = document.querySelector('.aside-box');
+const asideIcon = document.getElementById('arrow-icon');
 // ketika hamburger menu di klik
 document.querySelector('#arrow-aside').onclick = (e) => {
     asideBox.classList.toggle('active');
+    if(asideIcon.className === 'bx bxs-chevron-left-square') {
+        asideIcon.className = 'bx bxs-chevron-right-square';
+    } else {
+        asideIcon.className = 'bx bxs-chevron-left-square';
+    }
     e.preventDefault();
 };
 
@@ -29,5 +35,6 @@ const arrow = document.querySelector('#arrow-aside');
 document.addEventListener('click', function (e) {
     if (!arrow.contains(e.target) && !asideBox.contains(e.target)) {
         asideBox.classList.remove('active');
+        asideIcon.className = 'bx bxs-chevron-left-square';
     }
 });
