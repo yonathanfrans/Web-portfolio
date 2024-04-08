@@ -38,3 +38,16 @@ document.addEventListener('click', function (e) {
         asideIcon.className = 'bx bxs-chevron-left-square';
     }
 });
+
+// fitur dark mode
+const darkIcon = document.getElementById('dark-icon');
+const body = document.body;
+
+document.querySelector('#dark-toggle').onclick = (e) => {
+    body.classList.toggle('dark-mode');
+    if(darkIcon.className === 'bx bxs-moon') {
+        darkIcon.className = 'bx bxs-sun';
+    } else {
+        darkIcon.className = 'bx bxs-moon';
+    }
+};

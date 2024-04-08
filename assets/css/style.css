@@ -4,6 +4,7 @@
     --bg-color: #FAF9F6;
     --main-color: #87CEEB;
     --second-color:	#191970;
+    --dark-color: #191919;
 
 }
 
@@ -74,6 +75,44 @@ section {
 #hamburger-menu {
     display: none;
     font-size: 35px;
+}
+
+#dark-toggle {
+    position: absolute;
+    font-size: 25px;
+    color: var(--second-color);
+    right: 5rem;
+    top: 2.5rem;
+    cursor: pointer;
+}
+
+.dark-mode {
+    background-color: var(--dark-color);
+    color: white;
+}
+
+body.dark-mode .navbar-container .navbar-nav .nav-links a,
+body.dark-mode #dark-toggle {
+    color: white;
+}
+body.dark-mode .navbar-container .navbar-nav .nav-links a:hover {
+    color: var(--main-color);
+}
+body.dark-mode .about-box,
+body.dark-mode .skills-subtitle,
+body.dark-mode article div,
+body.dark-mode .project-subtitle h4,
+body.dark-mode .project-tags,
+body.dark-mode .project-info p,
+body.dark-mode .aside-title,
+body.dark-mode .contact-detail i {
+    color: black;
+}
+body.dark-mode .about-box, 
+body.dark-mode .skill-box, 
+body.dark-mode .aside-box,
+body.dark-mode .projects-box {
+    box-shadow: 8px 8px 18px 0px var(--second-color);
 }
   
 
@@ -458,6 +497,10 @@ footer p {
         width: 80%;
         margin-top: 2rem;
     }
+    #dark-toggle {
+        right: 4.5rem;
+        top: 3rem;
+    }
 }
 
 @media screen and (max-width: 990px) {
@@ -509,6 +552,9 @@ footer p {
     }
     .about-details {
         text-align: justify;
+    }
+    #dark-toggle {
+        top: 2.8rem;
     }
     
 }
@@ -571,6 +617,10 @@ footer p {
     .project-info {
         padding: 1.2rem 1.5rem;
     }
+    #dark-toggle {
+        right: 3rem;
+        top: 4.8rem;
+    }
 }
 
 @media screen and (max-width: 450px) {
@@ -622,4 +672,8 @@ footer p {
     footer .navbar-container .navbar-nav .nav-links {
         gap: 1.4rem;
     } 
+    #dark-toggle {
+        right: 0.5rem;
+        top: 2.5rem;
+    }
 }
