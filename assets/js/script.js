@@ -3,13 +3,13 @@ const navLinks = document.querySelector('.nav-links');
 // ketika hamburger menu di klik
 document.querySelector('#hamburger-menu').onclick = (e) => {
     navLinks.classList.toggle('active');
-    e.preventDefault();
+    // e.stopPropagation();
 };
 
 // klik di luar sidebar untuk menghilangkan nav
-const hamburger = document.querySelector('#hamburger-menu');
 
 document.addEventListener('click', function (e) {
+    const hamburger = document.querySelector('#hamburger-menu');
     if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
         navLinks.classList.remove('active');
     }

@@ -392,17 +392,15 @@ article i {
 .project-tags {
     display: flex;
     gap: 1rem;
-    margin: 1rem 0;
+    margin: 0.5rem 0;
 }
 
 .project-tags div {
-    font-size: 0.9rem;
-    border: 1px solid #EDEADE;
-    padding: 0.4rem 1rem;
+    padding: 0.2rem;
 }
 
-.project-tags div:hover {
-    background-color: var(--main-color);
+.project-tags div i {
+    font-size: 1.2rem;
 }
 
 #contact {
@@ -507,6 +505,9 @@ footer p {
     header .nav-links {
         display: none;
     }
+    #dark-toggle {
+        position: static;
+    }
     #hamburger-menu {
         display: block;
     }
@@ -553,9 +554,9 @@ footer p {
     .about-details {
         text-align: justify;
     }
-    #dark-toggle {
+    /* #dark-toggle {
         top: 2.8rem;
-    }
+    } */
     
 }
 
@@ -608,8 +609,8 @@ footer p {
     .project-subtitle a {
         font-size: 18px;
     }
-    .project-tags div {
-        font-size: 0.6rem;
+    .project-tags div i {
+        font-size: 1rem;
     }
     .project-info p {
         font-size: 0.7rem;
