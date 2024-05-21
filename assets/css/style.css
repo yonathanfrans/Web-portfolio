@@ -80,7 +80,7 @@ section {
 #dark-toggle {
     position: absolute;
     font-size: 25px;
-    color: var(--second-color);
+    color: #202B3C;
     right: 5rem;
     top: 2.5rem;
     cursor: pointer;
@@ -89,6 +89,10 @@ section {
 .dark-mode {
     background-color: var(--dark-color);
     color: white;
+}
+
+body.dark-mode header {
+    background-color: #1C1C1C;
 }
 
 body.dark-mode .navbar-container .navbar-nav .nav-links a,
@@ -112,7 +116,7 @@ body.dark-mode .about-box,
 body.dark-mode .skill-box, 
 body.dark-mode .aside-box,
 body.dark-mode .projects-box {
-    box-shadow: 8px 8px 18px 0px var(--second-color);
+    box-shadow: 8px 8px 18px 0px #202B3C;
 }
   
 
@@ -182,6 +186,7 @@ aside {
 .aside-box {
     width: 700px;
 }
+
 .aside-title {
     font-size: 1.5rem;
     text-align: center;
@@ -444,7 +449,15 @@ article i {
 footer {
     height: 26vh;
     margin: 0 1rem;
-    border-top: 2px solid var(--main-color);
+}
+
+footer hr {
+    background-color: var(--main-color);
+    border: 0;
+    color: var(--main-color);
+    width: 90%;
+    height: 2px;
+    margin: auto;
 }
   
 footer p {
@@ -627,54 +640,122 @@ footer p {
 @media screen and (max-width: 450px) {
     section {
         margin: 0 auto;
-        /* width: 360px; */
     }
-
+    .navbar-container .navbar-nav .logo {
+        font-size: 1.5rem;
+    }
+    #hamburger-menu {
+        font-size: 1.5rem;
+    }
     .aside-containers {
-        margin: 5rem 9rem 0 0;
+        margin: 6.5rem 6rem 0 0;
     }
- 
+    .aside-title {
+        font-size: 1rem;
+    }
+    .social-media li a {
+        font-size: 1.3rem;
+    }
     .nav-links.active {
         top: 11%;
-        left: 45%;
+        left: 55%;
+        width: 140px;
+        padding: 12px;
     }
+    .nav-links.active li a {
+        font-size: 14px;
+    }
+    .nav-links.active li #dark-toggle {
+        font-size: 18px;
+    }
+    #profile {
+        gap: 1rem;
+        height: min-content;
+    }
+      
     .profile-text {
         width: 300px;
+        font-size: 12px;
     }
     .profile-name {
         font-size: 1.8rem;
     }
+    .profile-pic img {
+        width: 350px;
+        height: 350px;  
+    } 
+    .picture-box {
+        height: 310px;
+        width: 300px;
+    }
+    .profile-pic {
+        top: 5%;
+        width: 250px;
+        height: 250px;
+    }
+    #arrow-aside {
+        font-size: 25px;
+    }
+    .about-containers {
+        margin-top: 1.3rem;
+    }
     .about-details {
-        text-align: justify;
-        width: 100%;
-        font-size: 0.9rem;
+        width: 250px;
+        font-size: 0.7rem;
     }
     .about-title {
         font-size: 1.8rem;
+    }
+    .about-box i {
+        font-size: 18px;
+    }
+    .about-box h3, article div h3 {
+        font-size: 0.9rem;
+    }
+    .about-box p, article div p {
+        font-size: 0.7rem;
+    }
+    .about-details {
+        font-size: 10px;
     }
     .box-containers {
         justify-content: center;
         align-items: center;
     }
     .about-box, .skill-box, .projects-box {
-        width: 90%;
+        width: 85%;
         margin: 0 auto;
+        flex: none;
+    }
+    .about-p, .skills-p, .projects-p, .contact-p {
+        font-size: 0.8rem;
+    }
+    .about-title, .skills-title, .projects-title, .contact-title {
+        font-size: 1.5rem;
+    }
+    .skills-subtitle {
+        font-size: 1rem;
+    }
+    article i {
+        font-size: 18px;
     }
     .contact-containers {
-        gap: 0.8rem;
+        gap: 0.5rem;
+    }
+    .contact-detail i, .contact-detail a {
+        font-size: 14px;
     }
     footer {
         height: fit-content;
         margin: 1rem;
     }
     footer .nav-links a {
-        font-size: 16px;
+        font-size: 13px;
+    }
+    footer p {
+        font-size: 11px;
     }
     footer .navbar-container .navbar-nav .nav-links {
         gap: 1.4rem;
     } 
-    #dark-toggle {
-        right: 0.5rem;
-        top: 2.5rem;
-    }
 }
