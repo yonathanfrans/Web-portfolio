@@ -739,6 +739,9 @@ footer p {
     article i {
         font-size: 18px;
     }
+    .project-subtitle a {
+        font-size: 15px;
+    }
     .contact-containers {
         gap: 0.5rem;
     }
