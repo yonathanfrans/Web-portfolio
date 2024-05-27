@@ -659,10 +659,13 @@ footer p {
     .contact-containers {
         width: min-content;
         margin: 2rem auto;
-        padding: 0.5rem;
+        padding: 0.2rem;
     }
     .contact-detail {
         margin: 0.8rem;
+    }
+    .contact-detail a, .contact-detail i {
+        font-size: 10px;
     }
     footer {
         height: fit-content;
