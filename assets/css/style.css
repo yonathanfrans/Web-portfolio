@@ -108,13 +108,17 @@ body.dark-mode article div,
 body.dark-mode .project-subtitle h4,
 body.dark-mode .project-tags,
 body.dark-mode .project-info p,
-body.dark-mode .contact-detail i {
-    color: black;
+body.dark-mode .contact-detail i,
+body.dark-mode .contact-detail a {
+    color: white;
 }
 body.dark-mode .about-box, 
 body.dark-mode .skill-box, 
-body.dark-mode .projects-box {
-    box-shadow: 8px 8px 18px 0px #202B3C;
+body.dark-mode .projects-box,
+body.dark-mode .contact-containers {
+    box-shadow: 8px 10px 18px 0px #202B3C;
+    border-color: #202B3C;
+    background-color: #1C1C1C;
 }
   
 
@@ -464,6 +468,10 @@ footer p {
         padding: 1rem 0;
         overflow: hidden;
     }
+    body.dark-mode .nav-links.active {
+        background-color: #1C1C1C;
+        border-color: #202B3C;
+    }
     .box-containers, .about-containers, .skills-containers, .projects-containers {
         flex-wrap: wrap;
     }
@@ -665,7 +673,7 @@ footer p {
         margin: 0.8rem;
     }
     .contact-detail a, .contact-detail i {
-        font-size: 10px;
+        font-size: 12px;
     }
     footer {
         height: fit-content;
