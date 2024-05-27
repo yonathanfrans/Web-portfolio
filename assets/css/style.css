@@ -108,13 +108,11 @@ body.dark-mode article div,
 body.dark-mode .project-subtitle h4,
 body.dark-mode .project-tags,
 body.dark-mode .project-info p,
-body.dark-mode .aside-title,
 body.dark-mode .contact-detail i {
     color: black;
 }
 body.dark-mode .about-box, 
 body.dark-mode .skill-box, 
-body.dark-mode .aside-box,
 body.dark-mode .projects-box {
     box-shadow: 8px 8px 18px 0px #202B3C;
 }
@@ -172,70 +170,6 @@ body.dark-mode .projects-box {
     color: var(--main-color);
 }
 
-
-aside {
-    position: fixed;
-    inset-block: 0;
-    inset-inline-end: 0;
-    width: 30%;
-    margin-top: 8rem;
-    z-index: 1000;
-}
-
-.aside-box {
-    width: 700px;
-}
-
-.aside-title {
-    font-size: 1.5rem;
-    text-align: center;
-}
-
-.aside-img img {
-    width: 50%;
-    object-fit: cover;
-}
-   
-.social-media {
-    display: flex;
-}
-   
-.social-media ul {
-    padding: 0.5rem 1rem;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1.5rem;
-}
-
-.social-media li a {
-    font-size: 1.5rem;
-    color: black;
-    transition: all 0.1s ease-in-out;
-}
-   
-.social-media li a:hover {
-    color: var(--main-color);
-}
-
-#arrow-aside {
-    font-size: 35px;
-    color: var(--main-color);
-    right: 0;
-    position: absolute;
-    top: 40%;
-    transform: translateY(-50%);
-}
-
-.aside-box {
-    display: none;
-}
-
-.aside-box.active {
-    display: inline-block;
-}
-
 #about {
     position: relative;
     margin-top: 2rem;
@@ -251,17 +185,13 @@ aside {
     color: var(--main-color);
 }
 
-.about-containers, .skills-containers, .projects-containers, .aside-containers {
+.about-containers, .skills-containers, .projects-containers {
     display: flex;
     gap: 2rem;
     margin: 2rem auto;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
-
-.aside-containers {
-    margin: 4rem auto;
 }
 
 .box-containers { 
@@ -271,7 +201,7 @@ aside {
     margin-top: 2rem;
 }
 
-.about-box, .skill-box, .aside-box {
+.about-box, .skill-box {
     padding: 1.5rem;
     text-align: center;
     flex: 1;
@@ -417,11 +347,14 @@ article i {
 .contact-containers {
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
     border: 0.1rem solid rgb(163, 163, 163);
     border-radius: 2rem;
     background: white;
     margin: 2rem auto;
     padding: 0.5rem;
+    width: 700px;
 }
 
 .contact-detail {
@@ -477,12 +410,6 @@ footer p {
         height: max-content;
         margin: 3rem 3rem 10rem;
     }
-    .aside-box {
-        width: min-content;
-    }
-    .aside-containers {
-        margin: 2rem 2rem 2rem auto;
-    }
     .picture-box {
         display: flex;
         order: -1;
@@ -499,7 +426,7 @@ footer p {
     .hero-profile {
         text-align: center;
     }
-    .about-containers, .skills-containers, .projects-containers, .contact-containers {
+    .about-containers, .skills-containers, .projects-containers {
         margin-top: 3rem;
         flex-wrap: wrap;
     }
@@ -536,15 +463,16 @@ footer p {
         border-radius: 2rem;
         z-index: 1000;
         padding: 1rem 0;
+        overflow: hidden;
     }
-    .aside-containers {
-        margin-right: 5rem;
-    }
-    .box-containers, .about-containers, .skills-containers, .projects-containers, .contact-containers {
+    .box-containers, .about-containers, .skills-containers, .projects-containers {
         flex-wrap: wrap;
     }
+    .contact-containers {
+        width: 550px;
+    }
     .contact-detail {
-        margin: 0 1rem;
+        margin: 1rem;
     }
     .contact-detail a, .nav-links li a {
         font-size: 1rem;
@@ -566,21 +494,12 @@ footer p {
     .about-details {
         text-align: justify;
     }
-    /* #dark-toggle {
-        top: 2.8rem;
-    } */
     
 }
 
 @media screen and (max-width: 890px) {
     section {
         margin: 0 3rem 0 3rem;
-    }
-    aside {
-        width: 55%;
-    }
-    .aside-containers {
-        margin: 17rem;
     }
     .about-box {
         width: 250px;
@@ -630,6 +549,15 @@ footer p {
     .project-info {
         padding: 1.2rem 1.5rem;
     }
+    .contact-containers {
+        width: 500px;
+    }
+    .contact-detail {
+        margin: 0.5rem;
+    }
+    .contact-detail a, .contact-detail i {
+        font-size: 15px;
+    }
     #dark-toggle {
         right: 3rem;
         top: 4.8rem;
@@ -645,15 +573,6 @@ footer p {
     }
     #hamburger-menu {
         font-size: 1.5rem;
-    }
-    .aside-containers {
-        margin: 6.5rem 6rem 0 0;
-    }
-    .aside-title {
-        font-size: 1rem;
-    }
-    .social-media li a {
-        font-size: 1.3rem;
     }
     .nav-links.active {
         top: 11%;
@@ -691,9 +610,6 @@ footer p {
         top: 5%;
         width: 250px;
         height: 250px;
-    }
-    #arrow-aside {
-        font-size: 25px;
     }
     .about-containers {
         margin-top: 1.3rem;
@@ -742,10 +658,12 @@ footer p {
         font-size: 15px;
     }
     .contact-containers {
-        gap: 0.5rem;
+        width: min-content;
+        margin: 2rem auto;
+        padding: 1rem;
     }
-    .contact-detail i, .contact-detail a {
-        font-size: 14px;
+    .contact-detail {
+        margin: 0.8rem;
     }
     footer {
         height: fit-content;
