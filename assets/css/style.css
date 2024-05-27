@@ -226,6 +226,15 @@ body.dark-mode .contact-containers {
     font-size: 15px;
 }
 
+.more-content {
+    display: none;
+  }
+
+.read-more-btn, .read-less-btn {
+    color: var(--main-color);
+    cursor: pointer;
+}
+
 #skills {
     position: relative;
 }
