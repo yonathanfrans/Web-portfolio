@@ -280,8 +280,8 @@ article i {
 }
 
 .projects-containers {
-    flex-direction: row;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, 0fr); 
     gap: 3rem;
     width: auto;
     padding-top: 3rem;
@@ -438,9 +438,13 @@ footer p {
     .hero-profile {
         text-align: center;
     }
-    .about-containers, .skills-containers, .projects-containers {
+    .about-containers, .skills-containers {
         margin-top: 3rem;
         flex-wrap: wrap;
+    }
+    .projects-containers {
+        margin: auto;
+        column-gap: 1.5rem;
     }
     .about-details {
         width: 80%;
@@ -481,7 +485,7 @@ footer p {
         background-color: #1C1C1C;
         border-color: #202B3C;
     }
-    .box-containers, .about-containers, .skills-containers, .projects-containers {
+    .box-containers, .about-containers, .skills-containers {
         flex-wrap: wrap;
     }
     .contact-containers {
@@ -580,6 +584,13 @@ footer p {
     }
 }
 
+@media screen and (max-width: 790px) {
+    .projects-containers {
+        grid-template-columns: repeat(1, 0fr); 
+        margin-top: 2rem;
+    }
+}
+
 @media screen and (max-width: 450px) {
     section {
         margin: 0 auto;
@@ -663,6 +674,9 @@ footer p {
     }
     .about-title, .skills-title, .projects-title, .contact-title {
         font-size: 1.5rem;
+    }
+    .projects-containers {
+        grid-template-columns: repeat(1, 1fr); 
     }
     .skills-subtitle {
         font-size: 1rem;
