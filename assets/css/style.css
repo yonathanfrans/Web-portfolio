@@ -63,9 +63,9 @@ section {
     text-decoration-color: var(--main-color);
 }
 
-.navbar-container .navbar-nav .logo {
-    font-size: 2rem;
-    font-weight: 300;
+.navbar-container .navbar-nav .logo img {
+    width: 65px;
+    height: 60px;
 }
 
 .navbar-container .navbar-nav .logo:hover {
@@ -201,14 +201,18 @@ body.dark-mode .contact-containers {
 .box-containers { 
     display: flex;
     flex-direction: row;
+    justify-content: center;
     gap: 4rem;
     margin-top: 2rem;
 }
 
 .about-box, .skill-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 1.5rem;
     text-align: center;
-    flex: 1;
+    /* flex: 1; */
     width: 300px;
     background: white;
     border: 0.1rem solid rgb(163, 163, 163);
@@ -250,13 +254,8 @@ body.dark-mode .contact-containers {
 }
 
 .article-container {
-    display: flex; 
-    flex-wrap: wrap;
-    flex-direction: row;
-    gap: 2.5rem;
-    justify-content: center;
-    align-items: center;
-    padding: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 0fr);
 }
   
 article {
@@ -265,6 +264,7 @@ article {
     width: 150px;
     align-items: center;
     text-align: left;
+    margin: 1rem;
 }
 
 article i {
@@ -431,10 +431,6 @@ footer p {
     .skill-box {
         width: 400px;
     }
-    .article-container {
-        padding: 1rem;
-        gap: 0.8rem;
-    }
     .hero-profile {
         text-align: center;
     }
@@ -488,6 +484,12 @@ footer p {
     .box-containers, .about-containers, .skills-containers {
         flex-wrap: wrap;
     }
+    .box-containers.skill {
+        column-gap: 1.7rem;
+    }
+    article {
+        padding-left: 1.3rem;
+    }
     .contact-containers {
         width: 550px;
     }
@@ -499,9 +501,6 @@ footer p {
     }
     .skills-subtitle {
         font-size: 1.25rem;
-    }
-    .logo {
-        font-size: 1.5rem;
     }
     header .nav-links {
         flex-direction: column;
@@ -536,13 +535,6 @@ footer p {
     .about-details {
         font-size: 13px;
     }
-    article {
-        font-size: 0.8rem;
-    }
-    .article-container {
-        gap: 1rem;
-        padding: 0.3rem;
-    }
     .projects-box {
         width: 350px;
     }
@@ -550,9 +542,6 @@ footer p {
         flex-direction: row;
         flex-wrap: wrap;
         gap: 0.4rem;
-    }
-    .skill-box {
-        width: 380px;
     }
     .project-subtitle h4 {
         font-size: 0.8rem;
@@ -595,8 +584,9 @@ footer p {
     section {
         margin: 0 auto;
     }
-    .navbar-container .navbar-nav .logo {
-        font-size: 1.5rem;
+    .navbar-container .navbar-nav .logo img {
+        width: 45px;
+        height: 40px;
     }
     #hamburger-menu {
         font-size: 1.5rem;
@@ -643,7 +633,8 @@ footer p {
     }
     .about-details {
         width: 250px;
-        font-size: 0.7rem;
+        font-size: 10px;
+        text-align: left;
     }
     .about-title {
         font-size: 1.8rem;
@@ -656,9 +647,6 @@ footer p {
     }
     .about-box p, article div p {
         font-size: 0.7rem;
-    }
-    .about-details {
-        font-size: 10px;
     }
     .box-containers {
         justify-content: center;
@@ -680,6 +668,9 @@ footer p {
     }
     .skills-subtitle {
         font-size: 1rem;
+    }
+    article {
+        margin: 1rem auto;
     }
     article i {
         font-size: 18px;
