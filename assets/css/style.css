@@ -634,7 +634,6 @@ footer p {
     .about-details {
         width: 250px;
         font-size: 10px;
-        text-align: left;
     }
     .about-title {
         font-size: 1.8rem;
@@ -668,6 +667,9 @@ footer p {
     }
     .skills-subtitle {
         font-size: 1rem;
+    }
+    .article-container {
+        grid-template-columns: repeat(1, 1fr); 
     }
     article {
         margin: 1rem auto;
