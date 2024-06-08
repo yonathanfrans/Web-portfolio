@@ -358,28 +358,28 @@ article i {
 }
 
 .contact-containers {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, 0fr); 
+    gap: 1rem;
     border: 0.1rem solid rgb(163, 163, 163);
     border-radius: 2rem;
     background: white;
     margin: 2rem auto;
-    padding: 0.5rem;
-    width: 700px;
+    padding: 1rem 2rem;
+    width: fit-content;
 }
 
 .contact-detail {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    margin: 1rem;
+    column-gap: 0.5rem;
+    margin: 0.5rem 0;
 }
 
 .contact-detail a {
     font-size: 20px;
     color: black;
+    width: max-content;
 }
 
 .contact-detail a:hover {
@@ -490,12 +490,6 @@ footer p {
     article {
         padding-left: 1.3rem;
     }
-    .contact-containers {
-        width: 550px;
-    }
-    .contact-detail {
-        margin: 1rem;
-    }
     .contact-detail a, .nav-links li a {
         font-size: 1rem;
     }
@@ -557,12 +551,6 @@ footer p {
     }
     .project-info {
         padding: 1.2rem 1.5rem;
-    }
-    .contact-containers {
-        width: 500px;
-    }
-    .contact-detail {
-        margin: 0.5rem;
     }
     .contact-detail a, .contact-detail i {
         font-size: 15px;
@@ -680,13 +668,12 @@ footer p {
     .project-subtitle a {
         font-size: 15px;
     }
-    .contact-containers {
+    .contact-containers {  
+        grid-template-columns: repeat(1, 0fr);
         width: min-content;
-        margin: 2rem auto;
-        padding: 0.2rem;
     }
     .contact-detail {
-        margin: 0.8rem;
+        margin: 0.2rem 0;
     }
     .contact-detail a, .contact-detail i {
         font-size: 12px;
