@@ -47,7 +47,9 @@ document.querySelector('#dark-toggle').onclick = (e) => {
     body.classList.toggle('dark-mode');
     if(darkIcon.className === 'bx bxs-moon') {
         darkIcon.className = 'bx bxs-sun';
+        darkIcon.style.color = '#FFD700';
     } else {
         darkIcon.className = 'bx bxs-moon';
+        darkIcon.style.color = '#202B3C';
     }
 };
