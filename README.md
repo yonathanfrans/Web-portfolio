@@ -1,4 +1,4 @@
-# Website Portfolio
+# Website Portofolio
 
 Website Portfolio adalah sebuah situs web yang memperlihatkan kemampuan, kreativitas, dan pengalaman yang dimiliki oleh individu kepada calon klien, perekrut, atau pengguna lainnya. Website ini dibuat sebagai single-page website, di mana semua informasi akan disajikan dalam satu halaman yang dapat diakses dengan melakukan scroll ke bawah atau menggunakan navigasi yang disediakan.
 
