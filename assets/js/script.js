@@ -53,3 +53,26 @@ document.querySelector('#dark-toggle').onclick = (e) => {
         darkIcon.style.color = '#202B3C';
     }
 };
+
+// fitur achievement
+document.querySelectorAll('.about-box p[data-achievement]').forEach(function(paragraph) {
+    paragraph.addEventListener('click', function() {
+        const achievementPath = this.getAttribute('data-achievement');
+        window.open(achievementPath, '_blank');
+    });
+});
+
+// navbar
+window.addEventListener('scroll', function() {
+    const navbars = document.querySelectorAll('header');
+    navbars.forEach(function(navbar) {
+        if (window.scrollY > 50) {
+            navbar.style.background = '#fafbfc';
+            navbar.style.boxShadow = '7px 4px 18px 0px black';
+            navbar.style.transition = '0.8s';
+        } else {
+            navbar.style.background = '#FAF9F6';
+            navbar.style.boxShadow = 'none';
+        }
+    });
+});

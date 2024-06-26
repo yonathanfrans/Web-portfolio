@@ -34,6 +34,13 @@ section {
     min-height: fit-content;
 }
 
+header {
+    position: fixed;
+    width: 100%;
+    margin-bottom: 20rem !important;
+    z-index: 1;
+}
+
 .navbar-nav, .nav-links {
     display: flex;
 }
@@ -61,6 +68,7 @@ section {
     text-decoration: underline;
     text-underline-offset: 1rem;
     text-decoration-color: var(--main-color);
+    transition: all 0.4s;
 }
 
 .navbar-container .navbar-nav .logo img {
@@ -89,10 +97,11 @@ section {
 .dark-mode {
     background-color: var(--dark-color);
     color: white;
+    transition: 0.8s;
 }
 
 body.dark-mode header {
-    background-color: #1C1C1C;
+    background-color: #1C1C1C !important;
 }
 
 body.dark-mode .navbar-container .navbar-nav .nav-links a,
@@ -127,6 +136,7 @@ body.dark-mode .contact-containers {
     justify-content: center;
     gap: 10rem;
     height: 80vh;
+    margin-top: 7rem;
 }
   
 .profile-pic {
@@ -138,21 +148,31 @@ body.dark-mode .contact-containers {
     margin: auto 0;
     border-radius: 50%;
     background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
-    
+    overflow: hidden;  
+    box-shadow: 4px 5px 18px 0px #82807f;
 }
 
 .profile-pic img {
-    top: -32%;
-    left: -17%;
+    top: -10%;
+    left: 11%;
     position: absolute;
-    width: 500px;
-    height: 500px;  
+    width: 80%;
 } 
 
 .picture-box {
     position: relative;
     height: 600px;
     width: 400px;
+}
+
+.picture-shadow {
+    position: absolute;
+    left: 10%;
+    bottom: 15%;
+    width: 80%;
+    height: 25px; 
+    background-color: #82807f; 
+    border-radius: 50%;
 }
   
 .hero-profile {
@@ -176,7 +196,7 @@ body.dark-mode .contact-containers {
 
 #about {
     position: relative;
-    margin-top: 2rem;
+    margin-top: 4rem;
 }
 
 .about-p, .skills-p, .projects-p, .contact-p {
@@ -212,7 +232,6 @@ body.dark-mode .contact-containers {
     align-items: center;
     padding: 1.5rem;
     text-align: center;
-    /* flex: 1; */
     width: 300px;
     background: white;
     border: 0.1rem solid rgb(163, 163, 163);
@@ -228,6 +247,14 @@ body.dark-mode .contact-containers {
     text-align: center;
     width: 100%;
     font-size: 15px;
+}
+
+.achievement p {
+    cursor: pointer;
+}
+
+.achievement p:hover {
+    color: var(--main-color);
 }
 
 .more-content {
@@ -466,7 +493,7 @@ footer p {
         display: flex;
         flex-direction: column;
         position: absolute;
-        top: 11%;
+        top: 70%;
         left: 70%;
         height: max-content;
         width: 200px;
@@ -480,6 +507,7 @@ footer p {
     body.dark-mode .nav-links.active {
         background-color: #1C1C1C;
         border-color: #202B3C;
+        transition: 0.8s;
     }
     .box-containers, .about-containers, .skills-containers {
         flex-wrap: wrap;
@@ -513,6 +541,11 @@ footer p {
 @media screen and (max-width: 890px) {
     section {
         margin: 0 3rem 0 3rem;
+    }
+    .picture-shadow {
+        bottom: 10%;
+        left: 10%;
+        height: 30px;
     }
     .about-box {
         width: 250px;
@@ -580,8 +613,8 @@ footer p {
         font-size: 1.5rem;
     }
     .nav-links.active {
-        top: 11%;
-        left: 55%;
+        top: 75%;
+        left: 60%;
         width: 140px;
         padding: 12px;
     }
@@ -592,7 +625,7 @@ footer p {
         font-size: 18px;
     }
     #profile {
-        gap: 1rem;
+        /* gap: 1rem; */
         height: min-content;
     }
       
@@ -603,18 +636,17 @@ footer p {
     .profile-name {
         font-size: 1.5rem;
     }
-    .profile-pic img {
-        width: 350px;
-        height: 350px;  
-    } 
-    .picture-box {
-        height: 310px;
-        width: 300px;
-    }
     .profile-pic {
-        top: 5%;
         width: 250px;
         height: 250px;
+    }
+    .picture-shadow {
+        bottom: 10%;
+        left: 25%;
+        width: 50%;
+    }
+    .picture-box {
+        height: 450px;
     }
     .about-containers {
         margin-top: 1.3rem;
