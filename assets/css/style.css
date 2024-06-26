@@ -614,7 +614,7 @@ footer p {
     }
     .nav-links.active {
         top: 75%;
-        left: 53%;
+        left: 55%;
         width: 140px;
         padding: 12px;
     }
@@ -642,11 +642,12 @@ footer p {
     }
     .picture-shadow {
         bottom: 10%;
-        left: 25%;
-        width: 50%;
+        left: 22%;
+        width: 60%;
     }
     .picture-box {
         height: 450px;
+        width: 350px;
     }
     .about-containers {
         margin-top: 1.3rem;
