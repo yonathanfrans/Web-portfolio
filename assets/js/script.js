@@ -68,7 +68,7 @@ window.addEventListener('scroll', function() {
     navbars.forEach(function(navbar) {
         if (window.scrollY > 50) {
             navbar.style.background = '#fafbfc';
-            navbar.style.boxShadow = '7px 4px 18px 0px black';
+            navbar.style.boxShadow = '7px 4px 18px 0px #87CEEB';
             navbar.style.transition = '0.8s';
         } else {
             navbar.style.background = '#FAF9F6';
